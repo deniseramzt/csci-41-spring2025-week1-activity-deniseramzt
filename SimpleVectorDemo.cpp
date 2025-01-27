@@ -8,9 +8,10 @@ int main()
     const int SIZE = 10;    // Number of elements
     int count;              // Loop counter
 
-    // Create a SimpleVector of ints.
+    // Create 2 SimpleVector of ints.
     SimpleVector<int> intTable(SIZE);
-
+    SimpleVector<int> intTable2(SIZE);
+    
     // Create a SimpleVector of doubles.
     SimpleVector<double> doubleTable(SIZE);
 
@@ -18,6 +19,7 @@ int main()
     for (count = 0; count < SIZE; count++)
     {
         intTable[count] = (count * 2);
+        intTable2[count] = (count * 3); //intTable2 count multiplied by 3 
         doubleTable[count] = (count * 2.14);
     }
 
@@ -26,13 +28,14 @@ int main()
     for (count = 0; count < SIZE; count++)
         cout << intTable[count] << " ";
     cout << endl;
+    cout << "These values are in intTable2:\n"; //display values for intTable2
     cout << "These values are in doubleTable:\n";
     for (count = 0; count < SIZE; count++)
         cout << doubleTable[count] << " ";
     cout << endl;
 
     // Use the standard + operator on the elements.
-    cout << "\nAdding 5 to each element of intTable"
+    cout << "\nAdding 5 to each element of intTable, intTable2,"
         << " and doubleTable.\n";
     for (count = 0; count < SIZE; count++)
     {
@@ -45,13 +48,14 @@ int main()
     for (count = 0; count < SIZE; count++)
         cout << intTable[count] << " ";
     cout << endl;
+    cout << "These values are in intTable2:\n"; //display values for intTable2
     cout << "These values are in doubleTable:\n";
     for (count = 0; count < SIZE; count++)
         cout << doubleTable[count] << " ";
     cout << endl;
 
     // Use the standard ++ operator on the elements.
-    cout << "\nIncrementing each element of intTable and"
+    cout << "\nIncrementing each element of intTable, intTable2, and"
         << " doubleTable.\n";
     for (count = 0; count < SIZE; count++)
     {
@@ -64,6 +68,7 @@ int main()
     for (count = 0; count < SIZE; count++)
         cout << intTable[count] << " ";
     cout << endl;
+    cout << "These values are in intTable2:\n"; //display values for intTable2
     cout << "These values are in doubleTable:\n";
     for (count = 0; count < SIZE; count++)
         cout << doubleTable[count] << " ";
